@@ -1,0 +1,216 @@
+{% load static %}
+
+<!--<!doctype html>-->
+<html lang="en">
+  <head>
+    <title>aboutus</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/quill.snow.css' %}">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/style.css' %}">
+
+      <style>
+          .image{
+          width:425px;
+          height:300px;
+          }
+  .round{
+  width:250px;
+  height:250px;
+  border-radius:70%;
+  padding: 10px
+}
+      </style>
+
+  </head>
+  <body id="top">
+
+  <!--<div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>-->
+
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html"><u>Rojgaar</u></a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+              <li><a href="{% url 'aboutus' %}">About</a></li>
+              <!--<li class="has-children">
+                <a href="services.html">Pages</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="service-single.html">Service Single</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="portfolio-single.html">Portfolio Single</a></li>
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+              </li>-->
+              <li><a href="{% url 'contactus' %}">Contact</a></li>
+              <li><a href="{% url 'maboutus' %}">मराठी</a></li>
+              <!--<li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Recruiter</a></li>
+              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Jobseeker</a></li>-->
+
+            </ul>
+          </nav>
+
+          <!--<div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Recruiter</a>
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Jobseeker</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>-->
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div align="right">
+             <img class="round" src="{% static 'Rojgaar/Images/athma7.jpg' %}">
+          </div>
+
+
+        </div>
+      </div>
+    </header>
+
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">About Us</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+        <br><br>
+    <b style = "font-style:italic; font-size:20;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspThere are some jobs available, but jobseekers do not have access to that
+Information. An efficient search of the internet might help to jobseekers in their job hunt.
+        There are some web portals that provide an efficient way to search the web for online information on job vacancies for jobseekers.
+        Today, the internet has changed many aspects of our life, such as the way we look for jobs
+        If one person wants to find a new job, he/she can directly contact to the recruiter using this application.
+        There is no need to upload any resume, so this will be useful to both literate and illiterate jobseekers.
+        Online recruitment has become the standard method for recruiters and jobseekers to meet their respective objectives.
+    To help needy people by getting job. Needy people can go through this site and get income as per their skills. Hence it will reduce unemployment. This also helps to develop as well as show the talent in side you.
+        This site will used for both literate and illiterate people as it is available in English as well as Marathi language.</b>
+</div>
+  <br>
+  <hr>
+  <center>
+      <center><h1>Gallery</h1></center>
+
+      <center><table width="1000">
+          <tr>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar25.jpg' %}"></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar26.jpg' %}"></td>
+          </tr>
+
+          <tr>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar27.jpg' %}"></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar28.jpg' %}"></td>
+          </tr>
+
+          <tr>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar29.jpg' %}"></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar30.jpg' %}"></td>
+          </tr>
+
+          <tr>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar31.jpg' %}"></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar32.jpg' %}"></td>
+          </tr>
+
+          <tr>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar33.jpg' %}"></td>
+              <td></td>
+          </tr>
+
+          <tr>
+              <td></td>
+              <td><img class="image" src="{% static 'Rojgaar/Images/Rojgaar34.jpg' %}"></td>
+          </tr>
+
+      </table></center>
+  </center>
+
+  </div>
+
+  <script src="{% static 'Rojgaar/js/jquery.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.easing.1.3.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/bootstrap-select.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/custom.js' %}"></script>
+
+  </body>
+</html>

@@ -1,0 +1,388 @@
+{% load static %}
+
+<!--<!doctype html>-->
+<html lang="en">
+  <head>
+    <title>homepage</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="Free-Template.co" />
+    <link rel="shortcut icon" href="ftco-32x32.png">
+
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/animate.min.css' %}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/style.css' %}">
+    <style>
+      * {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  height: 400px;
+  width: 1000px;
+  position: relative;
+  margin:auto;
+  top: 20%;
+  margin-left: 300px;
+}
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin-left: 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/*for recruiter and jobseeker*/
+.button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.button1 {border-radius: 2px;}
+.button2 {border-radius: 4px;}
+
+/*For round images*/
+.round{
+  width:200px;
+  height:200px;
+  border-radius:50%;
+  padding: 10px
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #3e8e41;
+}
+
+.dropdown {
+  float: right;
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  right: 0;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+    </style>
+  </head>
+  <body id="top">
+
+  <div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html"><u>Rojgaar</u></a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="{% url 'index' %}" class="nav-link active">Home</a></li>
+              <li><a href="{% url 'aboutus' %}">About</a></li>
+              <!--<li class="has-children">
+                <a href="services.html">Pages</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="service-single.html">Service Single</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="portfolio-single.html">Portfolio Single</a></li>
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+              </li>-->
+              <li><a href="{% url 'contactus' %}">Contact</a></li>
+              <li><a href="{% url 'mindex' %}">मराठी</a></li>
+              <li class="d-lg-none"><a href="{% url 'recruiter' %}"><span class="mr-2">+</span> Recruiter</a></li>
+              <li class="d-lg-none"><a href="{% url 'jobseeker' %}"><span class="mr-2">+</span> Jobseeker</a></li>
+
+            </ul>
+          </nav>
+
+          <div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="{% url 'recruiter' %}" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Recruiter</a>
+              <a href="{% url 'jobseeker' %}" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Jobseeker</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+
+    <!-- HOME -->
+    <section class="home-section section-hero overlay bg-image" style="background-image: url('Rojgaar/Images/athma1.jpg');" id="home-section">
+
+        <div class="slideshow-container">
+
+        <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+          <img src="{% static 'Rojgaar/Images/athma7.jpg' %}" style="width:70%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+          <img src="{% static 'Rojgaar/Images/athma5.jpg' %}" style="width:70%">
+        </div>
+
+        <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+          <img src="{% static 'Rojgaar/Images/athma6.jpg' %}" style="width:70%">
+        </div>
+      <br>
+      <div style="text-align:center">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+        </div>
+
+        <div class="container">
+          <div class="row align-items-center justify-content-center">
+          <div class="col-md-12">
+            <div class="mb-5 text-center">
+              <h1 class="text-white font-weight-bold">The Easiest Way To Get Your Job</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate est, consequuntur perferendis.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <a href="#next" class="scroll-button smoothscroll">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+
+    </section>
+
+    <section class="py-5 bg-image overlay-primary fixed overlay" id="next" style="background-image: url('I:\VIT\Sy-MCA\Project\athma4.jpeg');">
+      <div class="container">
+        <div class="row pb-0 block__19738 section-counter">
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="0">0</strong>
+            </div>
+            <span class="caption">Candidates</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="0">0</strong>
+            </div>
+            <span class="caption">Jobs Posted</span>
+          </div>
+
+          <div class="col-6 col-md-6 col-lg-3 mb-5 mb-lg-0">
+            <div class="d-flex align-items-center justify-content-center mb-2">
+              <strong class="number" data-number="0">0</strong>
+            </div>
+            <span class="caption">Jobs Filled</span>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+<br><br>
+  <section>
+    <table width="1350px" margin="auto">
+      <tr>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar8.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar14.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar10.jpg' %}"></center></td>
+      </tr>
+      <tr>
+        <td style="color:black"><center><b>Tailor</b></center></td>
+        <td style="color:black"><center><b>Plumber</b></center></td>
+        <td style="color:black"><center><b>Bachat Gat</b></center></td>
+      </tr>
+      <tr>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar20.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar12.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar13.jpg' %}"></center></td>
+      </tr>
+      <tr>
+        <td style="color:black"><center><b>Cleaning</b></center></td>
+        <td style="color:black"><center><b>Teacher</b></center></td>
+        <td style="color:black"><center><b>Labour</b></center></td>
+      </tr>
+      <tr>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar4.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar19.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar21.jpg' %}"></center></td>
+      </tr>
+      <tr>
+        <td style="color:black"><center><b>Cook</b></center></td>
+        <td style="color:black"><center><b>Maid</b></center></td>
+        <td style="color:black"><center><b>Gardening</b></center></td>
+      </tr>
+      <tr>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar22.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar24.jpg' %}"></center></td>
+        <td><center><img class="round" src="{% static 'Rojgaar/Images/Rojgaar23.jpg' %}"></center></td>
+      </tr>
+      <tr>
+        <td style="color:black"><center><b>Painter</b></center></td>
+        <td style="color:black"><center><b>Waiter</b></center></td>
+        <td style="color:black"><center><b>Others</b></center></td>
+      </tr>
+    </table>
+  </section>
+
+  <script src="{% static 'Rojgaar/js/jquery.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.easing.1.3.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/bootstrap-select.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/custom.js' %}"></script>
+  <script>
+    var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 7000); // Change image every 7 seconds
+}
+
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+  </script>
+</div>
+  </body>
+</html>

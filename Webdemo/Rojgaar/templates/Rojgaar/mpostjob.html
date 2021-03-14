@@ -1,0 +1,406 @@
+{% load static %}
+
+<!--<!doctype html>-->
+<html lang="en">
+  <head>
+    <title>mpostjob</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/custom-bs.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/jquery.fancybox.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/bootstrap-select.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/icomoon/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/fonts/line-icons/style.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/owl.carousel.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/animate.min.css' %}">
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/quill.snow.css' %}">
+
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{% static 'Rojgaar/css/style.css' %}">
+    <style>
+      .jss317 {
+    color: #263838;
+    border: 0.75px solid #B4C2D4;
+    height: 35.33px;
+    padding: 6px;
+    font-size: 14px;
+    box-shadow: inset 0 -1px 0 0 #DCE7E7;
+    text-align: left;
+    font-weight: 400;
+    line-height: 17px;
+    border-radius: 4px;
+    outline-color: #0ACAD4;
+    text-transform: none;
+  }
+  .jss317::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .jss317::-webkit-outer-spin-button {
+    margin: 0;
+    appearance: none;
+    -webkit-appearance: none;
+  }
+  .jss317::-webkit-clear-button {
+    display: none;
+  }
+            .round{
+  width:250px;
+  height:250px;
+  border-radius:70%;
+  padding: 10px
+}
+    </style>
+  </head>
+  <body id="top">
+
+  <!--<div id="overlayer"></div>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>-->
+
+
+<div class="site-wrap">
+
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar mt-3">
+      <div class="container-fluid">
+        <div class="row align-items-center">
+          <div class="site-logo col-6"><a href="index.html"><u>रोजगार</u></a></div>
+
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
+              <li><a href="{% url 'mindex' %}" class="nav-link active">मुखपृष्ठ</a></li>
+              <li><a href="{% url 'maboutus' %}">आमच्याबद्दल</a></li>
+              <!--<li class="has-children">
+                <a href="services.html">Pages</a>
+                <ul class="dropdown">
+                  <li><a href="services.html">Services</a></li>
+                  <li><a href="service-single.html">Service Single</a></li>
+                  <li><a href="blog-single.html">Blog Single</a></li>
+                  <li><a href="portfolio.html">Portfolio</a></li>
+                  <li><a href="portfolio-single.html">Portfolio Single</a></li>
+                  <li><a href="testimonials.html">Testimonials</a></li>
+                  <li><a href="faq.html">Frequently Ask Questions</a></li>
+                  <li><a href="gallery.html">Gallery</a></li>
+                </ul>
+              </li>-->
+              <li><a href="{% url 'mcontactus' %}">संपर्क</a></li>
+              <li><a href="{% url 'postjob' %}">English</a></li>
+              <!--<li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Recruiter</a></li>
+              <li class="d-lg-none"><a href="post-job.html"><span class="mr-2">+</span> Jobseeker</a></li>-->
+
+            </ul>
+          </nav>
+
+          <!--<div class="right-cta-menu text-right d-flex aligin-items-center col-6">
+            <div class="ml-auto">
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Recruiter</a>
+              <a href="post-job.html" class="btn btn-outline-white border-width-2 d-none d-lg-inline-block"><span class="mr-2 icon-add"></span>Jobseeker</a>
+            </div>
+            <a href="#" class="site-menu-toggle js-menu-toggle d-inline-block d-xl-none mt-lg-2 ml-3"><span class="icon-menu h3 m-0 p-0 mt-2"></span></a>
+          </div>-->
+
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<div align="right">
+             <img class="round" src="{% static 'Rojgaar/Images/athma7.jpg' %}">
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <!-- HOME -->
+    <section class="section-hero overlay inner-page bg-image" style="background-image: url('images/hero_1.jpg');" id="home-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-7">
+            <h1 class="text-white font-weight-bold">नोकरीची माहिती पोस्ट करा</h1>
+            <div class="custom-breadcrumbs">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-section">
+      <div class="container">
+
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-8 mb-4 mb-lg-0">
+            <div class="d-flex align-items-center">
+              <div>
+                <h2>नोकरीची माहिती पोस्ट करा</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="row">
+              <!--<div class="col-6">
+                <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-open_in_new mr-2"></span>Preview</a>
+              </div>-->
+              <div class="col-6">
+                <a href="#" class="btn btn-block btn-primary btn-md">सेव्ह करा</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5">
+          <div class="col-lg-12">
+            <form class="p-4 p-md-5 border rounded" method="post">
+              {% csrf_token %}
+              <h3 class="text-black mb-5 border-bottom pb-2">नोकरीचा तपशील</h3>
+
+              <div class="form-group">
+                <label for="email">मोबाइल नंबर</label>
+                <input type="text" class="form-control" id="email" name="rmobno" placeholder="Enter Mobile Number">
+              </div>
+
+              <!--<div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email" placeholder="you@yourdomain.com">
+              </div>-->
+              <div class="form-group">
+                <label for="job-title">पदाचे नाव</label>
+                <input type="text" class="form-control" id="job-title" name="jtitle" placeholder="नोकरीच्या पदाचे नाव लिहा">
+              </div>
+                <div class="form-group">
+                <label for="job-region">नोकरीचे शहर</label>
+                <select class="selectpicker border rounded" name="jobregion" id="job-region"  data-style="btn-black" data-width="100%" data-live-search="true" title="नोकरीचे शहर निवडा">
+                      <option value="कोल्हापूर">कोल्हापूर</option>
+                      <option value="पुणे">पुणे</option>
+                      <option value="मुंबई">मुंबई</option>
+                      <option value="नागपूर">नागपूर</option>
+                      <option value="नांदेड">नांदेड</option>
+                      <option value="लातूर">लातूर</option>
+                      <option value="सातारा">सातारा</option>
+                      <option value="औरंगाबाद">औरंगाबाद</option>
+                      <option value="नाशिक">नाशिक</option>
+                      <option value="सोलापूर">सोलापूर</option>
+                      <option value="अमरावती">अमरावती</option>
+                      <option value="रत्नागिरी">रत्नागिरी</option>
+                    </select>
+              </div>
+
+              <div class="form-group">
+                <label for="job-address">नोकरीचा पत्ता</label>
+                <input type="text" class="form-control" id="job-address" name="jadd" placeholder="नोकरीचा पत्ता लिहा">
+              </div>
+              <div class="form-group">
+                <label for="job-type">नोकरीचा प्रकार</label>
+                <select class="selectpicker border rounded" name="jobtype" id="job-type" data-style="btn-black" data-width="100%" data-live-search="true" title="नोकरीचा प्रकार लिहा">
+                  <option value="पार्ट टाईम">पार्ट टाईम</option>
+                  <option value="फुल टाईम">फुल टाईम</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="jobcategory">नोकरीचा विभाग</label>
+                <center>
+                <table width="500" margin="auto">
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="tailor" name="jobcat" value="tailor">
+                      <label for="tailor"> शिवणकाम</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="plumber" name="jobcat" value="plumber">
+                      <label for="plumber"> प्लंबर</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="bachatgat" name="jobcat" value="bachatgat">
+                      <label for="bachatgat"> बचत गट</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="cleaning" name="jobcat" value="cleaning">
+                      <label for="cleaning"> सफाई कर्मचारी</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="teacher" name="jobcat" value="teacher">
+                      <label for="teacher"> शिक्षक</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="labour" name="jobcat" value="labour">
+                      <label for="labour"> कामगार</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="cook" name="jobcat" value="cook">
+                      <label for="cook"> आचारी</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="maid" name="jobcat" value="maid">
+                      <label for="maid"> मोलकरीण</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="gardner" name="jobcat" value="gardner">
+                      <label for="gardner"> माळी</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="painter" name="jobcat" value="painter">
+                      <label for="painter"> पेंटर</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="waiter" name="jobcat" value="waiter">
+                      <label for="waiter"> वाढपी</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="securityguard" name="jobcat" value="securityguard">
+                      <label for="securityguard"> सुरक्षा रक्षक</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="artcraft" name="jobcat" value="artcraft">
+                      <label for="artcraft"> कला व हस्तकला</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="deliveryper" name="jobcat" value="deliveryper">
+                      <label for="deliveryper"> डिलिव्हरी बॉय</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="electrician" name="jobcat" value="electrician">
+                      <label for="electrician"> इलेक्ट्रिशियन</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="salesper" name="jobcat" value="salesper">
+                      <label for="salesper"> कर्मचारी</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="driver" name="jobcat" value="driver">
+                      <label for="driver"> चालक</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="nurseward" name="jobcat" value="nurseward">
+                      <label for="nurseward"> परिचारिका / नर्स</label></td>
+                  </tr>
+                  <tr>
+                    <td margin-left="10px"><input type="checkbox" id="receptionist" name="jobcat" value="receptionist">
+                      <label for="receptionist"> रिसेप्शनिस्ट</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="mechanic" name="jobcat" value="mechanic">
+                      <label for="mechanic"> मेकॅनिक</label></td>
+                    <td margin-left="10px"><input type="checkbox" id="others" name="jobcat" value="others">
+                      <label for="others"> इतर</label></td>
+                  </tr>
+                </table></center>
+              </div>
+
+              <div class="form-group">
+                <label for="noofopening">रिक्त जागा</label>
+                <input type="number" class="form-control" id="noofopening" name="noofopen" placeholder="भरती साठी रिक्त जागांची संख्या">
+              </div>
+
+            <div class="form-group">
+              <label for="gender">लिंग</label>
+              <table width="500" margin="auto">
+                <tr>
+              <td><center><input type="radio" id="male" name="gender" value="m">
+                <label for="male">पुरुष</label></center></td>
+              <td><center><input type="radio" id="female" name="gender" value="f">
+                <label for="female">स्त्री</label></center></td>
+              <td><center><input type="radio" id="other" name="gender" value="o">
+                <label for="other">इतर</label></center></td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="form-group">
+              <label for="salary">वेतन</label><br>
+              ₹&nbsp&nbsp<input type="number" class="salary" name="salary1" id="salary">&nbsp&nbsp&nbsp&nbsp To &nbsp&nbsp&nbsp&nbsp<input type="number" class="salary" id="salary" name="salary2">&nbsp&nbspPer month
+            </div>
+
+            <div class="form-group">
+              <label for="jobtime">नोकरीची वेळ</label><br>
+            <input type="time" value="09:00 AM" name="jstime" step="1800" class="jss317"/><span class="jss319">&nbsp&nbspto&nbsp&nbsp</span><input type="time" value="18:00 PM" name="jetime" step="1800" class="jss317"/>
+            </div>
+
+              <div class="form-group">
+                <label for="job-description">नोकरीचे स्वरूप</label><br>
+                  <textarea name="jobdes" rows="10"  class="form-control" placeholder="नोकरीचे स्वरूप लिहा" id="job-description"></textarea>
+              </div>
+
+
+              <h3 class="text-black my-5 border-bottom pb-2">कंपनीचा तपशील(पर्यायी)</h3>
+              <div class="form-group">
+                <label for="company-name">कंपनीचा नाव</label>
+                <input type="text" class="form-control" name="comname" id="company-name" placeholder="कंपनीचा नाव लिहा">
+              </div>
+
+              <div class="form-group">
+                <label for="company-tagline">ब्रीदवाक्य (पर्यायी)</label>
+                <input type="text" class="form-control" name="comtagline" id="company-tagline" placeholder="ब्रीदवाक्य लिहा">
+              </div>
+
+              <div class="form-group">
+                <label for="job-description">कंपनीचे स्वरूप (पर्यायी)</label><br>
+                  <textarea name="comdes" rows="10" class="form-control" placeholder="कंपनीचे स्वरूप लिहा" id="job-description"></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="company-website-tw d-block">फोटो पोस्ट करा</label> <br>
+                <label class="btn btn-primary btn-md btn-file">
+                  फाईल निवडा<input type="file" hidden>
+                </label>
+              </div>
+
+              <div class="form-group">
+                <input type="checkbox" id="agree" name="agree" value="agree"><label>मला माहीत आहे की,वर दिलेली माहिती अचूक आहे.  कोणत्याही प्रकारचे गैरप्रकार झाल्यास मला माहित आहे की माझ्याविरूद्ध कायदेशीर कारवाई सुरू केली जाऊ शकते.</label>
+              </div>
+
+               <div class="col-6">
+                <!--<a href="#" class="btn btn-block btn-primary btn-md">Save Job</a>-->
+                <input type="submit" value="सेव्ह करा" name="सेव्ह करा" class="btn btn-block btn-primary btn-md">
+              </div>
+                {% if messages %}
+              {% for result in messages %}
+              <h2>{{result}}</h2>
+              {% endfor %}
+              {% endif %}
+
+
+            </form>
+          </div>
+
+
+        </div>
+        <div class="row align-items-center mb-5">
+
+          <div class="col-lg-4 ml-auto">
+            <div class="row">
+              <!--<div class="col-6">
+                <a href="#" class="btn btn-block btn-light btn-md"><span class="icon-open_in_new mr-2"></span>Preview</a>
+              </div>
+              <div class="col-6">
+                <a href="#" class="btn btn-block btn-primary btn-md">सेव्ह करा</a>
+                <input type="submit" value="Save Job" name="सेव्ह करा" class="btn btn-block btn-primary btn-md">
+              </div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+
+  </div>
+
+    <!-- SCRIPTS -->
+    <script src="{% static 'Rojgaar/js/jquery.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/isotope.pkgd.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/stickyfill.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.fancybox.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.easing.1.3.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/jquery.waypoints.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/jquery.animateNumber.min.js' %}"></script>
+    <script src="{% static 'Rojgaar/js/owl.carousel.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/bootstrap-select.min.js' %}"></script>
+
+    <script src="{% static 'Rojgaar/js/custom.js' %}"></script>
+
+
+  </body>
+</html>
